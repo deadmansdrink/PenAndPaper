@@ -43,12 +43,11 @@ Partial Class CharacterC
         Me.Statur_CBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.FamilienStatus_CBox = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.SozialerStatus_CBox = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Beruf_CBox = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -206,6 +205,7 @@ Partial Class CharacterC
         Me.RI_Button = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Beruf_Button = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.M_Menue_Panel.SuspendLayout()
         Me.Character_Skills_Panel.SuspendLayout()
         CType(Me.TB_Manipulation, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -462,15 +462,6 @@ Partial Class CharacterC
         Me.Label8.TabIndex = 19
         Me.Label8.Text = "Gewicht:"
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(266, 221)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(25, 13)
-        Me.Label11.TabIndex = 23
-        Me.Label11.Text = "???"
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -489,13 +480,13 @@ Partial Class CharacterC
         Me.Label14.TabIndex = 32
         Me.Label14.Text = "???"
         '
-        'ComboBox1
+        'FamilienStatus_CBox
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(131, 424)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(132, 21)
-        Me.ComboBox1.TabIndex = 30
+        Me.FamilienStatus_CBox.FormattingEnabled = True
+        Me.FamilienStatus_CBox.Location = New System.Drawing.Point(131, 424)
+        Me.FamilienStatus_CBox.Name = "FamilienStatus_CBox"
+        Me.FamilienStatus_CBox.Size = New System.Drawing.Size(132, 21)
+        Me.FamilienStatus_CBox.TabIndex = 30
         '
         'Label16
         '
@@ -507,13 +498,13 @@ Partial Class CharacterC
         Me.Label16.TabIndex = 29
         Me.Label16.Text = "Familienstatus:"
         '
-        'ComboBox2
+        'SozialerStatus_CBox
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(131, 397)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(132, 21)
-        Me.ComboBox2.TabIndex = 28
+        Me.SozialerStatus_CBox.FormattingEnabled = True
+        Me.SozialerStatus_CBox.Location = New System.Drawing.Point(131, 397)
+        Me.SozialerStatus_CBox.Name = "SozialerStatus_CBox"
+        Me.SozialerStatus_CBox.Size = New System.Drawing.Size(132, 21)
+        Me.SozialerStatus_CBox.TabIndex = 28
         '
         'Label17
         '
@@ -713,9 +704,9 @@ Partial Class CharacterC
         Me.Character_Skills_Panel.Controls.Add(Me.Label27)
         Me.Character_Skills_Panel.Controls.Add(Me.Label30)
         Me.Character_Skills_Panel.Controls.Add(Me.Label28)
-        Me.Character_Skills_Panel.Location = New System.Drawing.Point(987, 86)
+        Me.Character_Skills_Panel.Location = New System.Drawing.Point(987, 60)
         Me.Character_Skills_Panel.Name = "Character_Skills_Panel"
-        Me.Character_Skills_Panel.Size = New System.Drawing.Size(156, 58)
+        Me.Character_Skills_Panel.Size = New System.Drawing.Size(189, 38)
         Me.Character_Skills_Panel.TabIndex = 36
         '
         'Button3
@@ -900,9 +891,9 @@ Partial Class CharacterC
         Me.Life_Skills_Panel.Controls.Add(Me.Label48)
         Me.Life_Skills_Panel.Controls.Add(Me.Label49)
         Me.Life_Skills_Panel.Controls.Add(Me.Label50)
-        Me.Life_Skills_Panel.Location = New System.Drawing.Point(987, 9)
+        Me.Life_Skills_Panel.Location = New System.Drawing.Point(987, 17)
         Me.Life_Skills_Panel.Name = "Life_Skills_Panel"
-        Me.Life_Skills_Panel.Size = New System.Drawing.Size(156, 55)
+        Me.Life_Skills_Panel.Size = New System.Drawing.Size(135, 29)
         Me.Life_Skills_Panel.TabIndex = 36
         '
         'Button5
@@ -1167,7 +1158,7 @@ Partial Class CharacterC
         Me.Panel1.Controls.Add(Me.Character_Skills_Panel)
         Me.Panel1.Location = New System.Drawing.Point(344, 59)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(738, 818)
+        Me.Panel1.Size = New System.Drawing.Size(738, 608)
         Me.Panel1.TabIndex = 38
         '
         'Beruf_Panel
@@ -1184,9 +1175,9 @@ Partial Class CharacterC
         Me.Beruf_Panel.Controls.Add(Me.B_Fischer_Panel)
         Me.Beruf_Panel.Controls.Add(Me.B_Arbeitslos_Panel)
         Me.Beruf_Panel.Controls.Add(Me.Label54)
-        Me.Beruf_Panel.Location = New System.Drawing.Point(989, 212)
+        Me.Beruf_Panel.Location = New System.Drawing.Point(987, 211)
         Me.Beruf_Panel.Name = "Beruf_Panel"
-        Me.Beruf_Panel.Size = New System.Drawing.Size(143, 50)
+        Me.Beruf_Panel.Size = New System.Drawing.Size(86, 39)
         Me.Beruf_Panel.TabIndex = 42
         '
         'B_Handwerk_Panel
@@ -1195,9 +1186,9 @@ Partial Class CharacterC
         Me.B_Handwerk_Panel.Controls.Add(Me.PictureBox28)
         Me.B_Handwerk_Panel.Controls.Add(Me.PictureBox29)
         Me.B_Handwerk_Panel.Controls.Add(Me.Label77)
-        Me.B_Handwerk_Panel.Location = New System.Drawing.Point(920, 413)
+        Me.B_Handwerk_Panel.Location = New System.Drawing.Point(990, 407)
         Me.B_Handwerk_Panel.Name = "B_Handwerk_Panel"
-        Me.B_Handwerk_Panel.Size = New System.Drawing.Size(154, 43)
+        Me.B_Handwerk_Panel.Size = New System.Drawing.Size(139, 31)
         Me.B_Handwerk_Panel.TabIndex = 19
         '
         'Label76
@@ -1220,9 +1211,10 @@ Partial Class CharacterC
         '
         'PictureBox29
         '
+        Me.PictureBox29.Image = Global.Pen_and_Paper.My.Resources.Resources.TreeHanwerker
         Me.PictureBox29.Location = New System.Drawing.Point(7, 133)
         Me.PictureBox29.Name = "PictureBox29"
-        Me.PictureBox29.Size = New System.Drawing.Size(754, 834)
+        Me.PictureBox29.Size = New System.Drawing.Size(468, 452)
         Me.PictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox29.TabIndex = 20
         Me.PictureBox29.TabStop = False
@@ -1243,9 +1235,9 @@ Partial Class CharacterC
         Me.B_Soldat_Panel.Controls.Add(Me.PictureBox26)
         Me.B_Soldat_Panel.Controls.Add(Me.PictureBox27)
         Me.B_Soldat_Panel.Controls.Add(Me.Label75)
-        Me.B_Soldat_Panel.Location = New System.Drawing.Point(916, 370)
+        Me.B_Soldat_Panel.Location = New System.Drawing.Point(990, 372)
         Me.B_Soldat_Panel.Name = "B_Soldat_Panel"
-        Me.B_Soldat_Panel.Size = New System.Drawing.Size(124, 32)
+        Me.B_Soldat_Panel.Size = New System.Drawing.Size(90, 24)
         Me.B_Soldat_Panel.TabIndex = 19
         '
         'Label74
@@ -1269,9 +1261,10 @@ Partial Class CharacterC
         '
         'PictureBox27
         '
+        Me.PictureBox27.Image = Global.Pen_and_Paper.My.Resources.Resources.TreeSoldat
         Me.PictureBox27.Location = New System.Drawing.Point(7, 133)
         Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.Size = New System.Drawing.Size(754, 834)
+        Me.PictureBox27.Size = New System.Drawing.Size(488, 481)
         Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox27.TabIndex = 20
         Me.PictureBox27.TabStop = False
@@ -1343,9 +1336,9 @@ Partial Class CharacterC
         Me.B_Koch_Panel.Controls.Add(Me.PictureBox24)
         Me.B_Koch_Panel.Controls.Add(Me.PictureBox25)
         Me.B_Koch_Panel.Controls.Add(Me.Label73)
-        Me.B_Koch_Panel.Location = New System.Drawing.Point(916, 294)
+        Me.B_Koch_Panel.Location = New System.Drawing.Point(990, 292)
         Me.B_Koch_Panel.Name = "B_Koch_Panel"
-        Me.B_Koch_Panel.Size = New System.Drawing.Size(112, 32)
+        Me.B_Koch_Panel.Size = New System.Drawing.Size(77, 31)
         Me.B_Koch_Panel.TabIndex = 19
         '
         'Label72
@@ -1368,9 +1361,10 @@ Partial Class CharacterC
         '
         'PictureBox25
         '
+        Me.PictureBox25.Image = Global.Pen_and_Paper.My.Resources.Resources.TreeKoch
         Me.PictureBox25.Location = New System.Drawing.Point(7, 130)
         Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(466, 336)
+        Me.PictureBox25.Size = New System.Drawing.Size(466, 201)
         Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox25.TabIndex = 20
         Me.PictureBox25.TabStop = False
@@ -1391,9 +1385,9 @@ Partial Class CharacterC
         Me.B_Priester_Panel.Controls.Add(Me.PictureBox18)
         Me.B_Priester_Panel.Controls.Add(Me.PictureBox19)
         Me.B_Priester_Panel.Controls.Add(Me.Label67)
-        Me.B_Priester_Panel.Location = New System.Drawing.Point(916, 255)
+        Me.B_Priester_Panel.Location = New System.Drawing.Point(990, 257)
         Me.B_Priester_Panel.Name = "B_Priester_Panel"
-        Me.B_Priester_Panel.Size = New System.Drawing.Size(132, 30)
+        Me.B_Priester_Panel.Size = New System.Drawing.Size(114, 30)
         Me.B_Priester_Panel.TabIndex = 19
         '
         'Label66
@@ -1416,9 +1410,10 @@ Partial Class CharacterC
         '
         'PictureBox19
         '
+        Me.PictureBox19.Image = Global.Pen_and_Paper.My.Resources.Resources.TreePriester
         Me.PictureBox19.Location = New System.Drawing.Point(7, 130)
         Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.Size = New System.Drawing.Size(466, 336)
+        Me.PictureBox19.Size = New System.Drawing.Size(633, 473)
         Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox19.TabIndex = 20
         Me.PictureBox19.TabStop = False
@@ -1539,9 +1534,9 @@ Partial Class CharacterC
         Me.B_Sammler_Panel.Controls.Add(Me.PictureBox16)
         Me.B_Sammler_Panel.Controls.Add(Me.PictureBox17)
         Me.B_Sammler_Panel.Controls.Add(Me.Label65)
-        Me.B_Sammler_Panel.Location = New System.Drawing.Point(916, 140)
+        Me.B_Sammler_Panel.Location = New System.Drawing.Point(989, 136)
         Me.B_Sammler_Panel.Name = "B_Sammler_Panel"
-        Me.B_Sammler_Panel.Size = New System.Drawing.Size(109, 29)
+        Me.B_Sammler_Panel.Size = New System.Drawing.Size(112, 40)
         Me.B_Sammler_Panel.TabIndex = 19
         '
         'Label64
@@ -1564,9 +1559,10 @@ Partial Class CharacterC
         '
         'PictureBox17
         '
+        Me.PictureBox17.Image = Global.Pen_and_Paper.My.Resources.Resources.TreeSammeln
         Me.PictureBox17.Location = New System.Drawing.Point(7, 145)
         Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(595, 391)
+        Me.PictureBox17.Size = New System.Drawing.Size(640, 328)
         Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox17.TabIndex = 20
         Me.PictureBox17.TabStop = False
@@ -2125,11 +2121,21 @@ Partial Class CharacterC
         Me.Beruf_Button.Text = "Beruf-Info"
         Me.Beruf_Button.UseVisualStyleBackColor = True
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(269, 366)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(61, 24)
+        Me.Button6.TabIndex = 44
+        Me.Button6.Text = "test"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'CharacterC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2217, 889)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Beruf_Button)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RI_Button)
@@ -2142,14 +2148,13 @@ Partial Class CharacterC
         Me.Controls.Add(Me.Character_Skills_Button)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.FamilienStatus_CBox)
         Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.SozialerStatus_CBox)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Beruf_CBox)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Statur_CBox)
         Me.Controls.Add(Me.Label7)
@@ -2284,12 +2289,11 @@ Partial Class CharacterC
     Friend WithEvents Statur_CBox As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents FamilienStatus_CBox As ComboBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents SozialerStatus_CBox As ComboBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Beruf_CBox As ComboBox
     Friend WithEvents Label18 As Label
@@ -2447,4 +2451,5 @@ Partial Class CharacterC
     Friend WithEvents Label77 As Label
     Friend WithEvents Label78 As Label
     Friend WithEvents Beruf_Button As Button
+    Friend WithEvents Button6 As Button
 End Class
