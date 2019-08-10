@@ -1,4 +1,5 @@
 ﻿Public Class CharacterC
+    Public CARPRO As String = ""
     Private Sub M_Menue_Button_Click(sender As Object, e As EventArgs) Handles M_Menue_Button.Click
         If M_Menue_Panel.Visible = False Then
             M_Menue_Panel.Visible = True
@@ -732,9 +733,6 @@
             err_f = 1
         End If
 
-        MsgBox(SehrHoch.ToString + vbCrLf + Hoch.ToString + vbCrLf + Mittel.ToString + vbCrLf + Niedrig.ToString + vbCrLf + SehrNiedrig.ToString)
-
-
         If err_f = 1 Then
             Fehlermeldung = Fehlermeldung + ("Bitte beachte die vorgegebenen Skillpunkte der Life Skills") + vbCrLf
         End If
@@ -911,26 +909,10 @@
             err_d = 1
         End If
 
-        MsgBox(TB_Intuition.Value.ToString + vbCrLf + TB_Scharfsinn.Value.ToString + vbCrLf + TB_Wahrnehmung.Value.ToString + vbCrLf + TB_Intelligenz.Value.ToString + vbCrLf + TB_Charisma.Value.ToString + vbCrLf + TB_Konstitution.Value.ToString + vbCrLf + TB_Körperkraft.Value.ToString + vbCrLf + TB_Manipulation.Value.ToString)
-        MsgBox(SehrHoch2.ToString + vbCrLf + Hoch2.ToString + vbCrLf + Mittel2.ToString + vbCrLf + Niedrig2.ToString + vbCrLf + SehrNiedrig2.ToString)
-
-
 
         If err_d = 1 Then
             Fehlermeldung = Fehlermeldung + ("Bitte beachte die vorgegebenen Skillpunkte der Character Skills") + vbCrLf
         End If
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         If errrr = 1 Then
@@ -940,12 +922,22 @@
         If errrr = 0 Then
             Dim point As String = ""
             point = point + Name_Box.Text.ToString + ":" + Vorname_Box.Text.ToString + ":" + Alter_Box.Text.ToString + ":" + Gewicht_Box.Text.ToString + ":" + Rasse_CBox.Text.ToString + ":" + Religion_CBox.Text.ToString + ":" + Statur_CBox.Text.ToString + ":" + Beruf_CBox.Text.ToString + ":" + Charakterzüge1.Text.ToString + ":" + Charakterzüge2.Text.ToString + ":" + Charakterzüge3.Text.ToString + ":" + SozialerStatus_CBox.Text.ToString + ":" + FamilienStatus_CBox.Text.ToString + ":" + TB_Handwerk.Value.ToString + ":" + TB_Heilkunde.Value.ToString + ":" + TB_Geschick.Value.ToString + ":" + TB_Magie_Zauber.Value.ToString + ":" + TB_Menschenkenntnisse.Value.ToString + ":" + TB_Tierkenntnisse.Value.ToString + ":" + TB_Diplomatie.Value.ToString + ":" + TB_Intuition.Value.ToString + ":" + TB_Scharfsinn.Value.ToString + ":" + TB_Wahrnehmung.Value.ToString + ":" + TB_Intelligenz.Value.ToString + ":" + TB_Charisma.Value.ToString + ":" + TB_Konstitution.Value.ToString + ":" + TB_Körperkraft.Value.ToString + ":" + TB_Manipulation.Value.ToString
-            MsgBox(point)
+            'MsgBox(point)
+            CARPRO = point
+            Karakter_Auswahl.Show()
+
         End If
 
 
 
 
 
+    End Sub
+
+    Private Sub CharacterC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Character_Skills_Panel.Dock = DockStyle.Fill
+        Life_Skills_Panel.Dock = DockStyle.None
+        RI_Panel.Dock = DockStyle.None
+        Beruf_Panel.Dock = DockStyle.None
     End Sub
 End Class

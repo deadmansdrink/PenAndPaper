@@ -43,8 +43,6 @@ Partial Class CharacterC
         Me.Statur_CBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.FamilienStatus_CBox = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SozialerStatus_CBox = New System.Windows.Forms.ComboBox()
@@ -205,7 +203,6 @@ Partial Class CharacterC
         Me.RI_Button = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Beruf_Button = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.M_Menue_Panel.SuspendLayout()
         Me.Character_Skills_Panel.SuspendLayout()
         CType(Me.TB_Manipulation, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -437,6 +434,7 @@ Partial Class CharacterC
         'Statur_CBox
         '
         Me.Statur_CBox.FormattingEnabled = True
+        Me.Statur_CBox.Items.AddRange(New Object() {"Mollig"})
         Me.Statur_CBox.Location = New System.Drawing.Point(94, 243)
         Me.Statur_CBox.Name = "Statur_CBox"
         Me.Statur_CBox.Size = New System.Drawing.Size(169, 21)
@@ -462,27 +460,10 @@ Partial Class CharacterC
         Me.Label8.TabIndex = 19
         Me.Label8.Text = "Gewicht:"
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(269, 428)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(25, 13)
-        Me.Label13.TabIndex = 33
-        Me.Label13.Text = "???"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(269, 400)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(25, 13)
-        Me.Label14.TabIndex = 32
-        Me.Label14.Text = "???"
-        '
         'FamilienStatus_CBox
         '
         Me.FamilienStatus_CBox.FormattingEnabled = True
+        Me.FamilienStatus_CBox.Items.AddRange(New Object() {"Ledig"})
         Me.FamilienStatus_CBox.Location = New System.Drawing.Point(131, 424)
         Me.FamilienStatus_CBox.Name = "FamilienStatus_CBox"
         Me.FamilienStatus_CBox.Size = New System.Drawing.Size(132, 21)
@@ -501,6 +482,7 @@ Partial Class CharacterC
         'SozialerStatus_CBox
         '
         Me.SozialerStatus_CBox.FormattingEnabled = True
+        Me.SozialerStatus_CBox.Items.AddRange(New Object() {"Arm"})
         Me.SozialerStatus_CBox.Location = New System.Drawing.Point(131, 397)
         Me.SozialerStatus_CBox.Name = "SozialerStatus_CBox"
         Me.SozialerStatus_CBox.Size = New System.Drawing.Size(132, 21)
@@ -704,9 +686,9 @@ Partial Class CharacterC
         Me.Character_Skills_Panel.Controls.Add(Me.Label27)
         Me.Character_Skills_Panel.Controls.Add(Me.Label30)
         Me.Character_Skills_Panel.Controls.Add(Me.Label28)
-        Me.Character_Skills_Panel.Location = New System.Drawing.Point(987, 60)
+        Me.Character_Skills_Panel.Location = New System.Drawing.Point(987, 75)
         Me.Character_Skills_Panel.Name = "Character_Skills_Panel"
-        Me.Character_Skills_Panel.Size = New System.Drawing.Size(189, 38)
+        Me.Character_Skills_Panel.Size = New System.Drawing.Size(167, 44)
         Me.Character_Skills_Panel.TabIndex = 36
         '
         'Button3
@@ -718,6 +700,7 @@ Partial Class CharacterC
         Me.Button3.TabIndex = 38
         Me.Button3.Text = "Test"
         Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
         '
         'Button2
         '
@@ -893,7 +876,7 @@ Partial Class CharacterC
         Me.Life_Skills_Panel.Controls.Add(Me.Label50)
         Me.Life_Skills_Panel.Location = New System.Drawing.Point(987, 17)
         Me.Life_Skills_Panel.Name = "Life_Skills_Panel"
-        Me.Life_Skills_Panel.Size = New System.Drawing.Size(135, 29)
+        Me.Life_Skills_Panel.Size = New System.Drawing.Size(134, 29)
         Me.Life_Skills_Panel.TabIndex = 36
         '
         'Button5
@@ -904,6 +887,7 @@ Partial Class CharacterC
         Me.Button5.TabIndex = 38
         Me.Button5.Text = "test"
         Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.Visible = False
         '
         'Button4
         '
@@ -1158,7 +1142,7 @@ Partial Class CharacterC
         Me.Panel1.Controls.Add(Me.Character_Skills_Panel)
         Me.Panel1.Location = New System.Drawing.Point(344, 59)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(738, 608)
+        Me.Panel1.Size = New System.Drawing.Size(738, 776)
         Me.Panel1.TabIndex = 38
         '
         'Beruf_Panel
@@ -2111,6 +2095,7 @@ Partial Class CharacterC
         Me.Button1.TabIndex = 42
         Me.Button1.Text = "Place holder"
         Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'Beruf_Button
         '
@@ -2121,21 +2106,11 @@ Partial Class CharacterC
         Me.Beruf_Button.Text = "Beruf-Info"
         Me.Beruf_Button.UseVisualStyleBackColor = True
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(269, 366)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(61, 24)
-        Me.Button6.TabIndex = 44
-        Me.Button6.Text = "test"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'CharacterC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2217, 889)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Beruf_Button)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RI_Button)
@@ -2146,8 +2121,6 @@ Partial Class CharacterC
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Life_Skills_Button)
         Me.Controls.Add(Me.Character_Skills_Button)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.FamilienStatus_CBox)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.SozialerStatus_CBox)
@@ -2289,8 +2262,6 @@ Partial Class CharacterC
     Friend WithEvents Statur_CBox As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents FamilienStatus_CBox As ComboBox
     Friend WithEvents Label16 As Label
     Friend WithEvents SozialerStatus_CBox As ComboBox
@@ -2451,5 +2422,4 @@ Partial Class CharacterC
     Friend WithEvents Label77 As Label
     Friend WithEvents Label78 As Label
     Friend WithEvents Beruf_Button As Button
-    Friend WithEvents Button6 As Button
 End Class
